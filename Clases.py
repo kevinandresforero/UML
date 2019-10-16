@@ -29,9 +29,9 @@ def main():
 
             self.__atributos = Text(marco, width = 20, height=10, bg="black" , fg="white")
             self.__atributos.grid(row=2,column=0)
-            #self.__atributos.insert(END," ")
 
-            self.__metodos = Text(marco, width = 20, height=10, bg="black" , fg="white").grid(row=2,column=1)
+            self.__metodos = Text(marco, width = 20, height=10, bg="black" , fg="white")
+            self.__metodos.grid(row=2,column=1)
             
 
         #def guardarDatos(self):
@@ -43,6 +43,11 @@ def main():
                 x=self.__atributos.get(1.0, END)
                 r = re.split("/n", x)
                 for i in r:
+                    print(i)
+
+                a=self.__metodos.get(1.0, END)
+                b = re.split("/n", a)
+                for i in b:
                     print(i)
 
             self.__btnEnviar = Button(marco, text = "Enviar Clase", bg="black", fg="white", command=guardarDatos).grid( row=2,
