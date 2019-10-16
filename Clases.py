@@ -27,21 +27,23 @@ def main():
 
             self.__nombre = Entry(marco, textvariable = auxNN, bg="black" , fg="white").grid(padx=5, pady=5, row=1,column=0)
 
-            self.__atributos = Text(marco, width = 20, height=10, bg="black" , fg="white").grid(row=2,column=0)
-            #matrizatr = [range(self.__columna) for i in range()]
+            self.__atributos = Text(marco, width = 20, height=10, bg="black" , fg="white")
+            self.__atributos.grid(row=2,column=0)
+            #self.__atributos.insert(END," ")
 
             self.__metodos = Text(marco, width = 20, height=10, bg="black" , fg="white").grid(row=2,column=1)
-            #matrizmet = [range(self.__columna) for i in range()]
+            
 
         #def guardarDatos(self):
             def guardarDatos():
+
                 most =auxNN.get()
-
                 print(most)
-                mest = self.__atributos[self.__fila].get('1.0', END)
 
-                print(mest)
-
+                x=self.__atributos.get(1.0, END)
+                r = re.split("/n", x)
+                for i in r:
+                    print(i)
 
             self.__btnEnviar = Button(marco, text = "Enviar Clase", bg="black", fg="white", command=guardarDatos).grid( row=2,
                                                                                                   column=2,
