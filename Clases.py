@@ -33,8 +33,33 @@ def main():
             self.__metodos = Text(marco, width = 20, height=10, bg="black" , fg="white")
             self.__metodos.grid(row=2,column=1)
             
+            #****************************************#
 
-        #def guardarDatos(self):
+            def crear():
+                nuevaven = tk.Toplevel(marco)
+                nuevaven.title('Clases')
+                nuevaven.geometry('300x300')
+                nuevaven.configure(bg="black")
+                
+
+                boton.config(state='disable')
+
+                '''def cierra_nueva():
+                    nueva_ventana.destroy()
+
+                    boton.config(state='normal')
+                cerrar = tk.Button(nueva_ventana,
+                    text='Cerrar nueva ventana',
+                    command=cierra_nueva)
+                cerrar.pack()
+
+                nueva_ventana.protocol("WM_DELETE_WINDOW", cerrar)'''
+
+            boton = tk.Button(marco, text="Mostrar clase", bg="black", fg="white", command=crear)
+            boton.grid(row=3, column=2, padx=5)
+            #boton.pack()
+
+            #****************************************#
             def guardarDatos():
 
                 most =auxNN.get()
