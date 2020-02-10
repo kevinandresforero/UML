@@ -51,7 +51,26 @@ def main():
                 r = re.split("/n", x)
                 for i in r:
                     print(i)
+                    
+                m = ""
+                m = m.replace("private", "-")
+                m = m.replace("p", "-")
+                m = m.replace("public", "+")
+                m = m.replace("", "+")
+                print(mensaje8a)
+                
                 lienzo.create_text(50,70, text=str(x))
+                
+
+                x=self.__metodos.get(1.0, END)
+                r = re.split("/n", x)
+                for i in r:
+                    print(i)
+                lienzo.create_text(50,250, text=str(x))
+
+
+
+                
 
                 ventana.mainloop()
             #crear()
@@ -63,13 +82,16 @@ def main():
             def guardarDatos():
 
                 
-                #print(most)
-
-
+                #print(mostrar)
 
                 a=self.__metodos.get(1.0, END)
                 b = re.split("/n", a)
                 for i in b:
+                    print(i)
+
+                c = self.__atributos.get(2.0, END)
+                d = re.split("/n", c)
+                for i in d:
                     print(i)
 
             self.__btnEnviar = Button(marco, text = "Enviar Clase", bg="black", fg="white", command=guardarDatos).grid( row=2,
